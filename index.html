@@ -9,6 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="style_index.css">
 </head>
@@ -17,9 +18,7 @@
 
     <header class=" bg-dark">
         <div class="cartAnduser d-flex float-end ">
-            <div class="search-icon ">
-                <a href="#"><i class="bi bi-search fs-3 px-2 text-white d-block d-sm-none"></i></a>
-            </div>
+
             <div class="user-icon">
                 <a href="#"><i class="bi bi-person text-white fs-3 px-2"></i></a>
             </div>
@@ -28,93 +27,68 @@
             </div>
 
         </div>
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.jpg" alt="" width="100">
-                </a>
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item ">
-                            <a class="nav-link active text-white " aria-current="page" href="#">Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Tin tức</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Sản phẩm
-                            </a>
-                            <ul class="dropdown-menu bg-dark">
-                                <li><a class="dropdown-item text-white bg-dark border-secondary " href="#">Action</a>
-                                </li>
-                                <li><a class="dropdown-item text-white bg-dark border-secondary " href="#">Another
-                                        action</a></li>
-                                <li><a class="dropdown-item text-white bg-dark border-secondary " href="#">Something
-                                        else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white " href="#">Khuyến mãi</a>
-                        </li>
-                    </ul>
 
-                </div>
-                <form class="d-sm-flex d-none">
-                    <input class="form-control me-2 " type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
-                    <button class="btn btn-outline-primary text-white search-btn" type="submit">Tìm kiếm</button>
-                </form>
-                <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
-
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark  fs-4">
+            <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="./Product/logo.jpg" alt="" width="100">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-white border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body ">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                                <a class="nav-link text-white active" aria-current="page" href="#">Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tin tức</a>
+                                <a class="nav-link text-white" href="#">Tin tức</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Sản phẩm
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Quần nam</a></li>
-                                    <li><a class="dropdown-item" href="#">Áo nam</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        <span class="dropdown-item-block">Quần nam</span>
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                        <ul class="drop-submenu">
+                                            <li><a href="#">Quần Jogger</a></li>
+                                            <li><a href="#">Quần Âu</a></li>
+                                            <li><a href="#">Quần Kaki</a></li>
+                                            <li><a href="#">Quần Short</a></li>
+                                        </ul>
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li class="dropdown-item">
+                                        <a href="#">
+                                            <span class="dropdown-item-block">Áo nam</span>
+                                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                            <ul class="drop-submenu">
+                                                <li><a href="#">Áo Khoác</a></li>
+                                                <li><a href="#">Áo Sơmi</a></li>
+                                                <li><a href="#">Áo Polo</a></li>
+                                                <li><a href="#">Áo Hoodie</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
                                 </ul>
+
                             </li>
                         </ul>
-
+                        <form class="d-flex mt-3 fs-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Nhập sản phẩm"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success search-btn" type="submit">Tìm kiếm</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -640,8 +614,8 @@
                 </div>
             </div>
             <div class="row gy-4 mt-4">
-                <button class="btn btn-outline-primary btn-showmore fs-3 text-info">
-                    <span>Xem thêm</span>
+                <button class="btn btn-outline-primary btn-showmore fs-3 text-info text-center">
+                    Xem thêm
                     <i class="bi bi-arrow-90deg-right"></i>
                 </button>
             </div>
@@ -870,20 +844,52 @@
                 <div class="col-12 col-sm-6 col-md-4 Footer-right fs-5">
                     <div class="footer-col-right">
                         <h4>Hỗ trợ(9:00-20:00)</h4>
-                        <ul class="link-footer-contact">
+                        <ul class="link-footer-contact d-flex list-unstyled align-items-center">
                             <li>
-                                <a href="">
-                                    <img width="20" height="20" alt="headphones" src="https://web.nvnstatic.net/tp/T0458/img/headphones.png?v=3">
+                                <a href="tel:19002812">
+                                    <img width="20" height="20" alt="headphones"
+                                        src="https://web.nvnstatic.net/tp/T0458/img/headphones.png?v=3">
                                     19002812
                                 </a>
                             </li>
                             <li>
-                                <a href=""></a>
+                                <a href="mailto:contact@nhanh.vn">
+                                    <img alt="email" width="20" height="20"
+                                        src="https://web.nvnstatic.net/tp/T0458/img/mail.png?v=3">
+                                    contact@nhanh.vn
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-col-right"></div>
-                    <div class="footer-col-right"></div>
+
+
+                    <div class="footer-col-right">
+                        <h4>Theo dõi chúng tôi</h4>
+                        <ul class="clearfix-social d-flex list-unstyled align-items-center">
+                            <li>
+                                <a href="facebook.com">
+                                    <img src="./Product/icon-fb.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/accounts/login/">
+                                    <img src="./Product/icon-insta.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/login">
+                                    <img src="./Product/tiktok.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-right">
+                        <h4>Phương thức thanh toán</h4>
+                        <div class="payment">
+                            <img src="./Product/img-payment.png" alt="">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
