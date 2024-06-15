@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="style_index.css">
 </head>
 
+
 <body>
 
     <header class=" bg-dark">
         <div class="cartAnduser d-flex float-end">
 
-            <div class="user-icon  d-none d-lg-inline-block ">
+            <div class="user-icon d-none d-lg-inline-block ">
                 <a href="#"><i class="bi bi-person text-white fs-3 px-2"></i></a>
             </div>
             <div class="cart  d-none d-lg-inline-block ">
@@ -78,16 +79,19 @@
                                         </a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
-                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần Jogger</a>
+                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần
+                                            Jogger</a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
                                         <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần Âu</a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
-                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần Kaki</a>
+                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần
+                                            Kaki</a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
-                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần Short</a>
+                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Quần
+                                            Short</a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
                                         <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Áo khoác</a>
@@ -99,28 +103,30 @@
                                         <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Áo Polo</a>
                                     </li>
                                     <li class="dropdown-item d-lg-none bg-dark ">
-                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Áo Hoddie</a>
+                                        <a class="text-white fs-5" href="Quần jogger nam basic QJ-004.html">Áo
+                                            Hoddie</a>
                                     </li>
-                                    
-                                    
+
+
                                 </ul>
 
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
-                <form class="d-flex mt-3 fs-3 " role="search">
-                    <input class="form-control me-2 d-none d-sm-inline-block" type="search" placeholder="Nhập sản phẩm"
+                <form class="d-flex mt-3 fs-3 search-header" role="search">
+                    <input class="form-control me-2 d-none d-sm-inline-block h-100" type="search" placeholder="Nhập sản phẩm"
                         aria-label="Search">
-                    <button class="btn btn-outline-success search-btn d-none d-sm-inline-block" type="submit">Tìm kiếm</button>
+                    <button class="btn btn-outline-success search-btn d-none h-100 d-sm-inline-block" type="submit">Tìm
+                        kiếm</button>
                 </form>
                 <button class="navbar-toggler bg-white border-0 ms-auto" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                
+
+
             </div>
         </nav>
     </header>
@@ -148,6 +154,10 @@
             </button>
         </div>
     </section>
+
+
+
+
 
     <!--Categories product-->
     <div class="container mt-5">
@@ -926,13 +936,80 @@
     </footer>
 
 
-    <div class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-body">
-            <div class="modal-inner"></div>
-        </div>
-    </div>
+    <div class="overlay"></div>
+    <div class="login-form">
+        <form action="login" id="login-form">
+            <button type="button" class="close-form border-0 p-0 " aria-label="Close" onclick="closeLoginForm()">
+                <span class="fs-2" aria-hidden="true">&times;</span>
+            </button>
 
+
+            <div class="header-form-text text-center  co-6 fs-2">Đăng nhập</div>
+
+
+            <div class="my-5">
+
+                <input type="email" name="email" class="form-control-lg form-control" id="Email-login" placeholder="Email">
+                <span class="form-message"></span>
+            </div>
+            <div class="my-5">
+
+                <input type="email" name="pw" class="form-control-lg form-control" id="Pw-login" placeholder="Mật khẩu">
+                <span class="form-message"></span>
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary w-50">Đăng nhập</button>
+            </div>
+            <div class="form-footer ">
+                <span>Chưa có tài khoản ?</span>
+                <a href="" class="register-link">Ấn vào đây để đăng ký</a>
+            </div>
+        </form>
+    </div>
+    <div class="register-form">
+        <form action="regeister" id="register-form1">
+            <button type="button" class="close-form border-0 p-0 " aria-label="Close" onclick="closeRegisterForm()">
+                <span class="fs-2" aria-hidden="true">&times;</span>
+            </button>
+
+
+            <div class="header-form-text text-center co-6 fs-2">Đăng ký</div>
+
+
+            <div class="my-3 form-group ">
+
+                <input name="email" type="email" class=" form-control" id="email-register" placeholder="Email">
+                <span class="form-message"></span>
+            </div>
+            <div class="my-3 form-group">
+
+                <input name="Phone" type="text" class=" form-control" id="Phone-number" placeholder="Số điện thoại">
+                <span class="form-message"></span>
+            </div>
+            <div class="my-3 form-group">
+
+                <input name="Address" type="text" class=" form-control" id="Address" placeholder="Địa chỉ">
+                <span class="form-message"></span>
+            </div>
+            <div class="my-3 form-group">
+
+                <input name="pw" type="password" class=" form-control" id="Pw-register" placeholder="Mật khẩu">
+                <span class="form-message"></span>
+            </div>
+            <div class="my-3 form-group">
+
+                <input name="confrimed-pw" type="password" class=" form-control" id="Pw-confrim"
+                    placeholder="Xác nhận mật khẩu">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary w-50">Đăng ký</button>
+            </div>
+            
+
+        </form>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -940,12 +1017,47 @@
         crossorigin="anonymous"></script>
 
     <script>
-        const user= document.querySelector('.user-icon');
-        user.addEventListener("click",function(){
+        
 
-        })
+
     </script>
-    <script src=""></script>
+    <script src="./index.js"></script>
+    <script>
+        Validator({
+            form: '#register-form1',
+            errorselector: '.form-message',
+            rules: [
+                Validator.isRequired('#email-register'),
+                Validator.isEmail('#email-register'),
+                Validator.isRequired('#Phone-number'),
+                Validator.isPhoneNumber('#Phone-number'),
+
+                Validator.isRequired('#Address'),
+                Validator.isRequired('#Pw-register'),
+                Validator.minLength('#Pw-register', 6),
+                Validator.isRequired('#Pw-confrim'),
+                Validator.isConfrimed('#Pw-confrim', function () {
+                    return document.querySelector('#register-form1 #Pw-register').value;
+                }, 'Mật khẩu nhập lại không chính xác'),
+
+            ],
+            onSubmit: function (data) {
+                console.log(data)
+            }
+        });
+        Validator({
+            form: '#login-form1',
+            errorselector: '.form-message',
+            rules: [
+                Validator.isRequired('#email-login'),
+                Validator.isEmail('#email-login'),
+                Validator.isRequired('#password-login')
+            ],
+            onSubmit: function (data) {
+                console.log('Login Form Data:', data); 
+            }
+        });
+    </script>
 </body>
 
 </html>

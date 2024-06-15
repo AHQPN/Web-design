@@ -20,68 +20,11 @@ a {
 
 }
 
-@media (min-width:992px) {
-    /* Basic dropdown styling */
 
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
 
-    .dropdown-item {
-        position: relative;
-    }
-
-    .drop-submenu {
-        opacity: 0;
-        width: 150px;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        background-color: #fff;
-        z-index: 1;
-        border-radius: 3px;
-        margin-left: 1px;
-        list-style: none;
-        color: black;
-        text-align: center;
-        transition: .5s;
-        padding: 0px 0;
-        visibility: hidden;
-    }
-
-    .drop-submenu li {
-        padding: 10px 0;
-    }
-
-    .drop-submenu li:hover {
-        background-color: #f1f1f1;
-    }
-
-    .drop-submenu li a {
-        display: block;
-        height: 100%;
-    }
-
-    .dropdown-item:hover>.drop-submenu {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Dropdown item block styling */
-    .dropdown-item-block {
-        display: inline-block;
-        padding: 10px 20px;
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .dropdown-item-block:hover {
-        background-color: #f1f1f1;
-    }
+.search-header{
+    margin: 0 !important;
 }
-
-
 
 .nav-link:hover {
     color: blueviolet !important;
@@ -188,19 +131,122 @@ a {
     background-color: green;
 }
 
-.modal{
-    position: fixed;
-    top:0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+body.modal-open {
+    overflow: hidden;
 }
-.modal-overlay{
-    position: absolute;
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.modal_body{
-    width: ;
+
+.login-form,.register-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1050;
+}
+
+.login-form.show,.register-form.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1040;
+}
+.form-footer{
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.form-footer a{
+    text-decoration: underline;
+    color: blue ;
+}
+.form-message{
+    color: red;
+    font-size: 0.8rem;
+}
+@media (min-width:992px) {
+    /* Basic dropdown styling */
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        position: relative;
+    }
+
+    .drop-submenu {
+        opacity: 0;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #fff;
+        z-index: 1;
+        border-radius: 3px;
+        margin-left: 1px;
+        list-style: none;
+        color: black;
+        text-align: center;
+        transition: .5s;
+        padding: 0px 0;
+        visibility: hidden;
+    }
+
+    .drop-submenu li {
+        padding: 10px 0;
+    }
+
+    .drop-submenu li:hover {
+        background-color: #f1f1f1;
+    }
+
+    .drop-submenu li a {
+        display: block;
+        height: 100%;
+    }
+
+    .dropdown-item:hover>.drop-submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Dropdown item block styling */
+    .dropdown-item {
+        display: inline-block;
+        padding: 10px 20px;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1;
+    }
+    .login-form,.register-form{
+        width: 50%;
+        
+    }
 }
