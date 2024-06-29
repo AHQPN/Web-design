@@ -12,6 +12,7 @@ a {
     .dropdown-menu {
         padding: 0;
         border: none;
+        
     }
 
     .dropdown-menu li:hover a {
@@ -20,14 +21,60 @@ a {
 
 }
 
+header {
+    position: relative;
+}
+
+.cartAnduser {
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 2000;
+}
 
 
+
+.search-box {
+    cursor: pointer;
+}
+
+.nav-link{
+    font-size: 1.3rem !important;
+    padding: 8px 2px;
+}
+
+
+.search-box{
+    cursor: pointer;
+}
 .search-header{
     margin: 0 !important;
+}
+.search-bar-container {
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1100;
+}
+.search-bar {
+    width: 100%;
 }
 
 .nav-link:hover {
     color: blueviolet !important;
+}
+.user-icon{
+    position: relative;
+}
+
+.logined::after{
+    position: absolute;
+    content: "\2713";
+    bottom: 16px;
+    right: 4px;
+    color: white;
 }
 
 .search-btn {
@@ -37,6 +84,10 @@ a {
 @media screen and (max-width: 768px) {
     .search-icon {
         display: block;
+    }
+    .logout{
+        width: 70%;
+        height: 70%;
     }
 
 
@@ -162,8 +213,24 @@ body.modal-open {
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1050;
 }
+.logout{
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1050;
+}
 
-.login-form.show,.register-form.show {
+.login-form.show,.register-form.show,.logout.show {
     opacity: 1;
     visibility: visible;
 }
@@ -188,7 +255,10 @@ body.modal-open {
 }
 @media (min-width:992px) {
     /* Basic dropdown styling */
-
+    .dropdown-menu{
+        background-color: rgb(33,37 ,41) !important ;
+    }
+    
     .dropdown:hover .dropdown-menu {
         display: block;
     }
@@ -208,11 +278,12 @@ body.modal-open {
         border-radius: 3px;
         margin-left: 1px;
         list-style: none;
-        color: black;
+        color: white !important;
         text-align: center;
         transition: .5s;
         padding: 0px 0;
         visibility: hidden;
+        background-color: rgb(33,37 ,41);
     }
 
     .drop-submenu li {
@@ -220,10 +291,12 @@ body.modal-open {
     }
 
     .drop-submenu li:hover {
-        background-color: #f1f1f1;
+        background-color: rgb(53, 60, 68) ;
+        
     }
 
     .drop-submenu li a {
+        color: white;
         display: block;
         height: 100%;
     }
@@ -237,13 +310,16 @@ body.modal-open {
     .dropdown-item {
         display: inline-block;
         padding: 10px 20px;
-        color: black;
+        color: white;
         text-decoration: none;
         cursor: pointer;
+        background-color: rgb(33,37 ,41) 
+        
     }
 
     .dropdown-item:hover {
-        background-color: #f1f1f1;
+        background-color: rgb(53, 60, 68) ;
+        color: white;
     }
     .login-form,.register-form{
         width: 50%;
@@ -253,4 +329,87 @@ body.modal-open {
 
 .TPHCM-shop,.Hanoi-shop,.link-footer-contact{
     font-size: 0.9rem;
+}
+
+.close-form{
+    background: none !important;
+}
+
+
+
+.cart-item {
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .cart-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .left-info h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-detail {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .right-info p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .delete-product {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-product:hover {
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger {
+    border: none;
+    background-color: transparent;
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .rounded {
+    border-radius: 0.5rem !important;
+  }
+  
+
+
+.item-detail{
+    color:rgb(122, 112, 112);
+    padding: 3px 5px;
+}
+.delete-product button{
+    border: none;
+    
+}
+@media screen and (max-width: 768px) {
+    .search-icon {
+        display: block;
+    }
+    .logout{
+        width: 60%;
+        
+    }
+
+
 }
