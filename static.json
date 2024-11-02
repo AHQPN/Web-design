@@ -1,9 +1,0 @@
-{
-    "root": ".",
-    "headers": {
-      "/**": {
-        "Cache-Control": "no-store"
-      }
-    }
-  }
-  
